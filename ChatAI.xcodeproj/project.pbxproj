@@ -16,6 +16,8 @@
 		F029525D2948AEF5008D0F58 /* ChatAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029525C2948AEF5008D0F58 /* ChatAITests.swift */; };
 		F02952672948AEF5008D0F58 /* ChatAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02952662948AEF5008D0F58 /* ChatAIUITests.swift */; };
 		F02952692948AEF5008D0F58 /* ChatAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02952682948AEF5008D0F58 /* ChatAIUITestsLaunchTests.swift */; };
+		F02952772948B100008D0F58 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F02952762948B100008D0F58 /* OpenAISwift */; };
+		F02952792948B15D008D0F58 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02952782948B15D008D0F58 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		F02952622948AEF5008D0F58 /* ChatAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02952662948AEF5008D0F58 /* ChatAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIUITests.swift; sourceTree = "<group>"; };
 		F02952682948AEF5008D0F58 /* ChatAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F02952782948B15D008D0F58 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02952772948B100008D0F58 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 				F029524E2948AEF4008D0F58 /* Assets.xcassets */,
 				F02952502948AEF4008D0F58 /* LaunchScreen.storyboard */,
 				F02952532948AEF4008D0F58 /* Info.plist */,
+				F02952782948B15D008D0F58 /* APICaller.swift */,
 			);
 			path = ChatAI;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = ChatAI;
+			packageProductDependencies = (
+				F02952762948B100008D0F58 /* OpenAISwift */,
+			);
 			productName = ChatAI;
 			productReference = F02952422948AEF3008D0F58 /* ChatAI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = F02952392948AEF3008D0F58;
+			packageReferences = (
+				F02952752948B100008D0F58 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = F02952432948AEF3008D0F58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 				F029524A2948AEF3008D0F58 /* ViewController.swift in Sources */,
 				F02952462948AEF3008D0F58 /* AppDelegate.swift in Sources */,
 				F02952482948AEF3008D0F58 /* SceneDelegate.swift in Sources */,
+				F02952792948B15D008D0F58 /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F02952752948B100008D0F58 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F02952762948B100008D0F58 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F02952752948B100008D0F58 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F029523A2948AEF3008D0F58 /* Project object */;
 }
